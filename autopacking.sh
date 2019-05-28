@@ -1,6 +1,6 @@
 #!/bin/sh
 # 该脚本使用方法
-# 源码地址：https://github.com/stackhou
+# 源码地址：https://github.com/CocoaZX/AutoPacking
 # step 1. 在工程根目录新建AutoPacking文件夹，在该文件夹中新建文件autopacking.sh，将该脚本复制到autopacking.sh文件并保存(或者直接复制该文件);
 # step 2. 设置该脚本;
 # step 2. cd 该脚本目录，运行chmod +x autopacking.sh;
@@ -73,6 +73,14 @@ function printMessage() {
   pMessage=$1
   echo "${__LINE_BREAK_LEFT}${pMessage}${__LINE_BREAK_RIGHT}"
 }
+
+
+
+# # 0.选择打包环境
+# __PACK_ENVIONMENTS=("1.Developer" "2.Distribution")
+# READ_USER_INPUT "请选择开发环境(输入序号，直接回车): " "${__PACK_ENVIONMENTS[*]}" ${#__PACK_ENVIONMENTS[*]}
+# __PACK_OPTION=$?
+# 生产和测试环境下yarnbundle执行的环境变量不一样
 
 # 1. 请选择 SCHEME
 # __SELECT_TARGET_OPTIONS=("1.AutoPackingDemo")
